@@ -1,0 +1,321 @@
+/* ==========================
+   GENERAL
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+nav {
+    position: sticky;
+    top: 0;
+    background: #0f172a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header {
+    background: linear-gradient(135deg, #1e3a8a, #38bdf8);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.logo span {
+    background: #1e3a8a;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+section {
+    padding: 60px 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+section h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card {
+    background: white;
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button,
+.contact-btn,
+.whatsapp-btn {
+    display: inline-block;
+    background: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 10px;
+    transition: .3s;
+}
+
+button:hover,
+.contact-btn:hover,
+.whatsapp-btn:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+}
+
+/* ==========================
+   FORMS
+========================== */
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* ==========================
+   TESTIMONIALS
+========================== */
+
+.testimonial {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.testimonial h4 {
+    color: #1e3a8a;
+    margin-top: 15px;
+}
+
+/* ==========================
+   PORTFOLIO
+========================== */
+
+#portfolio {
+    background: #eef5ff;
+    text-align: center;
+}
+
+#portfolio h2 {
+    color: #0f172a;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+#stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.stat {
+    margin: 20px;
+}
+
+.stat h2 {
+    font-size: 40px;
+    color: #38bdf8;
+}
+
+.stat p {
+    font-size: 18px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* ==========================
+   WHATSAPP FLOAT
+========================== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    #stats {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    button,
+    .contact-btn,
+    .whatsapp-btn {
+        width: 90%;
+    }
+}.whatsapp-float {
+    width: 60px;
+    height: 60px;
+}
